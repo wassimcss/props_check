@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import Profile from './profile/Profile';
 
 function App() {
+  const bio='My name is Wassim Ahmed and I am a Junior Web Developer from GO MY CODE. I am an accomplished coder and programmer, and I enjoy using my skills to contribute to the exciting technological advances .Also, I graduated from the Engineering school of Sfax  in 2018 with a Master Degree in Electromechanical engineering.'
+  
+  const handleName = (x) => {
+    alert(x)
+  }
+
+  const styleImg = {border:"3px black solid",marginTop:"100px"}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile fullName='Wassim AHMED' profession='Junior Web Developer' bio={bio} handleName={handleName}>
+        <img style={styleImg} src="https://www.tanitjobs.com/files/pictures/image_1.PNG" alt=""/>
+      </Profile>
     </div>
   );
 }
